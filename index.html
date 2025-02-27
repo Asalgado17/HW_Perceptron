@@ -1,47 +1,61 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Perceptron</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-      <h1 class="title">Perceptron </h1>
-      <p id="currentTime"></p>
-      
-     <h1>4x4 Dropdown Grid</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perceptron (Machine Learning)</title>
 
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
 
-    <form>
-      <!-- 4x4 Table of Dropdowns -->
-      <table border="1">
-        <tr>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-        </tr>
-        <tr>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-        </tr>
-        <tr>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-        </tr>
-        <tr>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-        </tr>
-      </table>
-      <br>
-      <!-- Submit Button -->
-      <input type="submit" value="Submit" class="myButton">
-    </form>
-  </body>
+<body>
+  <h1 class="title">Perceptron</h1>
+  <p id="currentTime"></p>
+  
+  <h1>4x4 Dropdown Grid</h1>
+
+  <form method="POST">
+    <!-- 4x4 Table of Dropdowns -->
+    <table border="1">
+      <!-- Row 1 -->
+      <tr>
+        <td><select name="input_0_0"><option value="0">0</option><option value="1">1</option></select></td>
+        <td><select name="input_0_1"><option value="0">0</option><option value="1">1</option></select></td>
+        <td><select name="input_0_2"><option value="0">0</option><option value="1">1</option></select></td>
+        <td><select name="input_0_3"><option value="0">0</option><option value="1">1</option></select></td>
+      </tr>
+      <!-- Row 2 -->
+      <tr>
+        <td><select name="input_1_0"><option value="0">0</option><option value="1">1</option></select></td>
+        <td><select name="input_1_1"><option value="0">0</option><option value="1">1</option></select></td>
+        <td><select name="input_1_2"><option value="0">0</option><option value="1">1</option></select></td>
+        <td><select name="input_1_3"><option value="0">0</option><option value="1">1</option></select></td>
+      </tr>
+      <!-- Row 3 -->
+      <tr>
+        <td><select name="input_2_0"><option value="0">0</option><option value="1">1</option></select></td>
+        <td><select name="input_2_1"><option value="0">0</option><option value="1">1</option></select></td>
+        <td><select name="input_2_2"><option value="0">0</option><option value="1">1</option></select></td>
+        <td><select name="input_2_3"><option value="0">0</option><option value="1">1</option></select></td>
+      </tr>
+      <!-- Row 4 -->
+      <tr>
+        <td><select name="input_3_0"><option value="0">0</option><option value="1">1</option></select></td>
+        <td><select name="input_3_1"><option value="0">0</option><option value="1">1</option></select></td>
+        <td><select name="input_3_2"><option value="0">0</option><option value="1">1</option></select></td>
+        <td><select name="input_3_3"><option value="0">0</option><option value="1">1</option></select></td>
+      </tr>
+    </table>
+    <br>
+    <!-- Submit Button -->
+    <input type="submit" value="Submit" class="myButton">
+  </form>
+  
+  
+    <h3>Prediction: {{ prediction }}</h3>
+  
+  
+</body>
 </html>
