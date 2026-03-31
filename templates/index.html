@@ -48,6 +48,25 @@
     <div style="margin-top: 20px; font-weight: bold; font-size: 24px; text-align: center;">
         Prediction Result: {{ prediction }}
     </div>
+
+    {% if confidence %}
+    <div style="margin-top: 20px; background-color: #f0f0f0; padding: 15px; border-radius: 8px; text-align: center;">
+        <h3>Model Confidence</h3>
+        <p style="font-size: 18px;">
+            <strong>{{ confidence }}% confident</strong>
+        </p>
+        
+        <!-- Confidence Bar -->
+        <div style="background-color: #ddd; border-radius: 5px; height: 30px; margin: 10px 0; overflow: hidden;">
+            <div style="background-color: #4CAF50; height: 100%; width: {{ confidence }}%; transition: width 0.3s;">
+            </div>
+        </div>
+        
+        <p style="color: #666; font-size: 12px;">
+            Model is {{ confidence }}% confident this is a <strong>{{ prediction }}</strong>
+        </p>
+    </div>
+    {% endif %}
     {% endif %}
   </body>
 </html>
