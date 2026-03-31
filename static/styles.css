@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.title {
+    color: #333;
+    text-align: center;
+}
+
+h1, h3 {
+    color: #333;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+    text-align: center;
+}
+
+select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.myButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.myButton:hover {
+    background-color: #45a049;
+}
+
+.myButton:active {
+    background-color: #3d8b40;
+}
+
+#currentTime {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 4px;
+}

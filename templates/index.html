@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello, World!</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Perceptron Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
   </head>
   <body>
       <h1 class="title">Perceptron </h1>
@@ -11,43 +11,43 @@
      <h1>4x4 Dropdown Grid</h1>
 
 
-    <form>
+    <form method="POST">
       <!-- 4x4 Table of Dropdowns -->
       <table border="1">
         <tr>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
+          <td><select name="input_0_0"><option value="0">0</option><option value="1">1</option></select></td>
+          <td><select name="input_0_1"><option value="0">0</option><option value="1">1</option></select></td>
+          <td><select name="input_0_2"><option value="0">0</option><option value="1">1</option></select></td>
+          <td><select name="input_0_3"><option value="0">0</option><option value="1">1</option></select></td>
         </tr>
         <tr>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
+          <td><select name="input_1_0"><option value="0">0</option><option value="1">1</option></select></td>
+          <td><select name="input_1_1"><option value="0">0</option><option value="1">1</option></select></td>
+          <td><select name="input_1_2"><option value="0">0</option><option value="1">1</option></select></td>
+          <td><select name="input_1_3"><option value="0">0</option><option value="1">1</option></select></td>
         </tr>
         <tr>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
+          <td><select name="input_2_0"><option value="0">0</option><option value="1">1</option></select></td>
+          <td><select name="input_2_1"><option value="0">0</option><option value="1">1</option></select></td>
+          <td><select name="input_2_2"><option value="0">0</option><option value="1">1</option></select></td>
+          <td><select name="input_2_3"><option value="0">0</option><option value="1">1</option></select></td>
         </tr>
         <tr>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
-          <td><select><option value="1">1</option><option value="0">0</option></select></td>
+          <td><select name="input_3_0"><option value="0">0</option><option value="1">1</option></select></td>
+          <td><select name="input_3_1"><option value="0">0</option><option value="1">1</option></select></td>
+          <td><select name="input_3_2"><option value="0">0</option><option value="1">1</option></select></td>
+          <td><select name="input_3_3"><option value="0">0</option><option value="1">1</option></select></td>
         </tr>
       </table>
       <br>
       <!-- Submit Button -->
       <input type="submit" value="Submit" class="myButton">
-      
-      {% if prediction %}
-    <div style="margin-top: 20px; font-weight: bold; font-size: 24px;">
+    </form>
+    
+    {% if prediction %}
+    <div style="margin-top: 20px; font-weight: bold; font-size: 24px; text-align: center;">
         Prediction Result: {{ prediction }}
     </div>
-{% endif %}
-    </form>
+    {% endif %}
   </body>
 </html>
